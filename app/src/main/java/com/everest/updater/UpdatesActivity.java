@@ -144,6 +144,9 @@ public class UpdatesActivity extends UpdatesListActivity implements UpdateImport
                 }
             }
         };
+
+        updateSupportView();
+
         headerTitle = findViewById(R.id.app_bar);
 
         ImageButton mainIcon = findViewById(R.id.launchSettings);
@@ -336,6 +339,7 @@ public class UpdatesActivity extends UpdatesListActivity implements UpdateImport
             SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
             long millis = System.currentTimeMillis();
             preferences.edit().putLong(Constants.PREF_LAST_UPDATE_CHECK, millis).apply();
+            updateSupportView();
             if (json.exists() && Utils.isUpdateCheckEnabled(this) &&
                     Utils.checkForNewUpdates(json, jsonNew)) {
                 UpdatesCheckReceiver.updateRepeatingUpdatesCheck(this);
@@ -398,6 +402,21 @@ public class UpdatesActivity extends UpdatesListActivity implements UpdateImport
 
         refreshAnimationStart();
         downloadClient.start();
+    }
+
+    private void updateSupportView() {
+        updateMaintainerView();
+    }
+
+    private void updateMaintainerView() {
+        TextView maintainerName = findViewById(R.id.maintainer_name);
+        String maintainer = Utils.getMaintainer();
+        if (maintainer == null || maintainer.isEmpty()) {
+            maintainerName.setVisibility(View.GONE);
+        } else {
+            maintainerName.setText(getString(R.string.maintainer_name, maintainer));
+            maintainerName.setVisibility(View.VISIBLE);
+        }
     }
 
     private void handleDownloadStatusChange(String downloadId) {
