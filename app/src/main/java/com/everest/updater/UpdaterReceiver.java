@@ -28,6 +28,7 @@ import android.os.SystemProperties;
 import androidx.core.app.NotificationCompat;
 import androidx.preference.PreferenceManager;
 
+import com.everest.updater.controller.UpdaterController;
 import com.everest.updater.misc.BuildInfoUtils;
 import com.everest.updater.misc.Constants;
 import com.everest.updater.misc.StringGenerator;
@@ -97,6 +98,8 @@ public class UpdaterReceiver extends BroadcastReceiver {
                 pref.edit().putBoolean(Constants.PREF_INSTALL_NOTIFIED, true).apply();
                 showUpdateFailedNotification(context);
             }
+
+            UpdaterController.getInstance(context).checkForPendingDeletions();
         }
     }
 }
