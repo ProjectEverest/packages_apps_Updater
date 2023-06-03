@@ -45,6 +45,7 @@ public final class Constants {
     public static final String PROP_DEVICE = "ro.everest.device";
     public static final String PROP_NEXT_DEVICE = "ro.updater.next_device";
     public static final String PROP_RELEASE_TYPE = "ro.everest.buildtype";
+    public static final String PROP_ZIP_TYPE = "ro.everest.edition";
     public static final String PROP_UPDATER_ALLOW_DOWNGRADING = "everest.updater.allow_downgrading";
     public static final String PROP_UPDATER_URI = "everest.updater.uri";
 
