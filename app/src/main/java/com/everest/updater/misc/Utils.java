@@ -160,12 +160,24 @@ public class Utils {
     }
 
     public static String getServerURL(Context context) {
+        String incrementalVersion = SystemProperties.get(Constants.PROP_BUILD_VERSION_INCREMENTAL);
         String device = SystemProperties.get(Constants.PROP_NEXT_DEVICE,
                 SystemProperties.get(Constants.PROP_DEVICE));
+        String type = SystemProperties.get(Constants.PROP_RELEASE_TYPE).toLowerCase(Locale.ROOT);
 
-        String serverUrl = context.getString(R.string.updater_server_url);
+        String ziptype = SystemProperties.get(Constants.PROP_ZIP_TYPE);
+        String serverUrl = SystemProperties.get(Constants.PROP_UPDATER_URI);
 
-        return serverUrl.replace("{device}", device);
+        // Fallback to vanilla if prop was not found
+        if (ziptype == null) ziptype = "VANILLA";
+        if (serverUrl.trim().isEmpty()) {
+            serverUrl = context.getString(R.string.updater_server_url);
+        }
+
+        return serverUrl.replace("{device}", device)
+                .replace("{type}", type)
+                .replace("{incr}", incrementalVersion)
+                .replace("{ziptype}", ziptype);
     }
 
     public static String getUpgradeBlockedURL(Context context) {
