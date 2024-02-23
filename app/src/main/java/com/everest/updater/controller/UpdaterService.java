@@ -42,11 +42,9 @@ import com.everest.updater.misc.BuildInfoUtils;
 import com.everest.updater.misc.Constants;
 import com.everest.updater.misc.StringGenerator;
 import com.everest.updater.misc.Utils;
-import com.everest.updater.model.Update;
 import com.everest.updater.model.UpdateInfo;
 import com.everest.updater.model.UpdateStatus;
 
-import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.NumberFormat;
@@ -125,10 +123,8 @@ public class UpdaterService extends Service {
                     setNotificationTitle(update);
                     handleInstallProgress(update);
                 } else if (UpdaterController.ACTION_UPDATE_REMOVED.equals(intent.getAction())) {
-                    final boolean isLocalUpdate = Update.LOCAL_ID.equals(downloadId);
                     Bundle extras = mNotificationBuilder.getExtras();
-                    if (extras != null && !isLocalUpdate && downloadId.equals(
-                            extras.getString(UpdaterController.EXTRA_DOWNLOAD_ID))) {
+                    if (downloadId.equals(extras.getString(UpdaterController.EXTRA_DOWNLOAD_ID))) {
                         mNotificationBuilder.setExtras(null);
                         UpdateInfo update = mUpdaterController.getUpdate(downloadId);
                         if (update.getStatus() != UpdateStatus.INSTALLED) {
@@ -415,9 +411,7 @@ public class UpdaterService extends Service {
 
                 SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
                 boolean deleteUpdate = pref.getBoolean(Constants.PREF_AUTO_DELETE_UPDATES, false);
-                boolean isLocal = Update.LOCAL_ID.equals(update.getDownloadId());
-                // Always delete local updates
-                if (deleteUpdate || isLocal) {
+                if (deleteUpdate) {
                     mUpdaterController.deleteUpdate(update.getDownloadId());
                 }
 
