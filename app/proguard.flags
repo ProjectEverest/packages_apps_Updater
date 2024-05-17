@@ -1,1 +1,1 @@
--keep class com.awaken.updater.ui.FlingBehavior { *; }
+-keep class com.everest.updater.ui.FlingBehavior { *; }
