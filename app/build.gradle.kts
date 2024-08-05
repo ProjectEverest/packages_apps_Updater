@@ -1,7 +1,7 @@
 import java.util.Properties
-import com.rising.generatebp.GenerateBpPlugin
-import com.rising.generatebp.GenerateBpPluginExtension
-import com.rising.generatebp.models.Module
+import com.everest.generatebp.GenerateBpPlugin
+import com.everest.generatebp.GenerateBpPluginExtension
+import com.everest.generatebp.models.Module
 
 plugins {
     id("com.android.application")
@@ -18,7 +18,7 @@ buildscript {
     }
 
     dependencies {
-        classpath("com.rising:gradle-generatebp:+")
+        classpath("com.everest:gradle-generatebp:+")
     }
 }
 
@@ -31,10 +31,10 @@ val keystoreProperties = Properties().apply {
 
 android {
     compileSdk = 34
-    namespace = "com.rising.updater"
+    namespace = "com.everest.updater"
 
     defaultConfig {
-        applicationId = "com.rising.updater"
+        applicationId = "com.everest.updater"
         minSdk = 30
         targetSdk = 34
         versionCode = 1

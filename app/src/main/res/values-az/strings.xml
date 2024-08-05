@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2017-2023 The LineageOS Project
+     Copyright (C) 2017-2024 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -38,7 +38,13 @@
     <string name="preparing_ota_first_boot">İlk yükləmə üçün hazırlanır</string>
     <string name="dialog_prepare_zip_message">Güncəlləməyə ilkin hazırlıq</string>
     <string name="dialog_battery_low_title">Zəif batareya</string>
-    <string name="dialog_battery_low_message_pct">Batereya səviyyəsi çox aşağıdır, davam etmək üçün ən az batereya səviyyəsi <xliff:g id="percent_discharging">%1$d</xliff:g>%% olmalıdır, <xliff:g id="percent_charging">%2$d</xliff:g>%% enerji yığır.</string>
+    <string name="dialog_battery_low_message_pct">Batareya səviyyəsi çox aşağıdır, davam etmək üçün ən az <xliff:g id="percent_discharging">%1$d</xliff:g>%% olmalıdır, <xliff:g id="percent_charging">%2$d</xliff:g>%% dolur.</string>
+    <string name="dialog_scratch_mounted_message"><![CDATA[        Lütfən aşağıdakı əmrləri işə salın və yenidən güncəlləməyə çalışın:\n
+        • adb root\n
+        • adb enable-verity\n
+        • adb reboot
+        ]]></string>
+    <string name="dialog_scratch_mounted_title">OverlayFS taxılı ikən güncəlləmə quraşdırıla bilmir</string>
     <string name="reboot">Yenidən başlat</string>
     <string name="menu_refresh">Təzələ</string>
     <string name="menu_preferences">Tərcihlər</string>
@@ -54,7 +60,7 @@
     <string name="menu_show_changelog">Dəyişiklik jurnalını göstər</string>
     <string name="menu_ab_perf_mode">Üstünlüyü güncəlləmə prosesinə ver</string>
     <string name="menu_update_recovery">Geri qaytarma rejimini güncəllə</string>
-    <string name="toast_forced_update_recovery">Bu cihazda Lineage Geri qaytarma güncəlləmələrini sıradan çıxartmaq mümkün deyil.</string>
+    <string name="toast_forced_update_recovery">Bu cihazda Everest Geri qaytarma güncəlləmələrini sıradan çıxartmaq mümkün deyil.</string>
     <string name="snack_updates_found">Yeni güncəlləmə tapıldı</string>
     <string name="snack_no_updates_found">Yeni güncəlləmə tapılmadı</string>
     <string name="snack_updates_check_failed">Güncəlləmə yoxlanışı uğursuz oldu. Lütfən internet bağlantınızı yoxlayıb daha sonra yenidən sınayın.</string>
@@ -62,11 +68,11 @@
     <string name="snack_download_verification_failed">Güncəlləmə doğrulaması uğursuz oldu.</string>
     <string name="snack_download_verified">Endirmə tamamlandı.</string>
     <string name="snack_update_not_installable">Bu güncəlləmə hazırkı quruluşun üzərinə quraşdırıla bilməz.</string>
-    <string name="header_title_text">risingOS\n%1$s</string>
+    <string name="header_title_text">EverestOS\n%1$s</string>
     <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
     <string name="header_last_updates_check">Son yoxlama: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">risingOS <xliff:g id="version" example="14.1">%1$s</xliff:g></string>
-    <string name="list_build_version_date">risingOS <xliff:g id="version" example="14.1">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
+    <string name="list_build_version">EverestOS <xliff:g id="version" example="14.1">%1$s</xliff:g></string>
+    <string name="list_build_version_date">EverestOS <xliff:g id="version" example="14.1">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_newer"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_newer"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">Güncəlləmə doğrulanır</string>
@@ -81,7 +87,7 @@
     <string name="confirm_delete_dialog_title">Faylı sil</string>
     <string name="confirm_delete_dialog_message">Seçilmiş güncəlləmə faylı silinsin?</string>
     <string name="apply_update_dialog_title">Güncəlləməni tətbiq et</string>
-    <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g> quraşdırırsınız.\n\n<xliff:g id="ok">%2$s</xliff:g> bassanız, cihaz yeniləməni quraşdırmaq üçün geri qaytarma rejimində yenidən başlayacaq.\n\nQeyd: Bu özəlliyin uyğun bir Geri qaytarma mühitinə ehtiyacı var və ya yeniləmələr əllə quraşdırılmalıdır.</string>
+    <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g> quraşdırırsınız.\n\n<xliff:g id="ok">%2$s</xliff:g> bassanız, cihaz güncəlləməni quraşdırmaq üçün geri qaytarma rejimində yenidən başlayacaq.\n\nQeyd: Bu özəlliyin uyumlu bir Geri qaytarma mühitinə ehtiyacı var və ya güncəlləmələr əllə quraşdırılmalıdır.</string>
     <string name="apply_update_dialog_message_ab"><xliff:g id="update_name">%1$s</xliff:g> quraşdırırsınız.\n\n<xliff:g id="ok">%2$s</xliff:g> düyməsinə bassanız, cihaz arxaplanda quraşdırılmağa başlıyacaq.\n\nƏməliyyat bitəndə, yenidən başladılmalıdır.</string>
     <string name="cancel_installation_dialog_message">Quraşdırmadan imtina edilsin?</string>
     <string name="label_download_url">Endirmə bağlantısı</string>
@@ -114,7 +120,7 @@
     <string name="ongoing_channel_title">Davam edən endirmələr</string>
     <string name="update_failed_channel_title">Güncəlləmə uğursuz oldu</string>
     <string name="info_dialog_title">Bilirdiniz?</string>
-    <string name="info_dialog_message">risingOS yeniləmələri tam quraşdırma paketləridir. Yəni, yeniləməni ötürsəniz belə, hər zaman yalnız son yeniləməni quraşdıra bilərsiniz!</string>
+    <string name="info_dialog_message">EverestOS güncəlləmələri tam quraşdırma paketləridir. Yəni, güncəlləməni ötürsəniz belə, hər zaman yalnız son güncəlləməni quraşdıra bilərsiniz!</string>
     <string name="info_dialog_ok">Məlumat üçün təşəkkürlər!</string>
     <string name="local_update_import">Yerli güncəlləmə</string>
     <string name="local_update_import_progress">Yerli güncəlləmə daxilə köçürülür\u2026</string>

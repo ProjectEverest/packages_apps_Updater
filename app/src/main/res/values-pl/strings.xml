@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2017-2023 The LineageOS Project
+     Copyright (C) 2017-2024 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -39,6 +39,12 @@
     <string name="dialog_prepare_zip_message">Przygotowanie wstępne aktualizacji</string>
     <string name="dialog_battery_low_title">Niskim poziom baterii</string>
     <string name="dialog_battery_low_message_pct">Poziom naładowania baterii jest zbyt niski, musisz mieć co najmniej <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterii lub <xliff:g id="percent_charging">%2$d</xliff:g>%% w trakcie ładowania.</string>
+    <string name="dialog_scratch_mounted_message"><![CDATA[        Uruchom następujące polecenia i dokonaj ponownej aktualizacji:\n
+        • adb root\n
+        • adb enable-verity\n
+        • adb reboot
+        ]]></string>
+    <string name="dialog_scratch_mounted_title">Nie można zainstalować aktualizacji z zamontowanym \"OverlayFS\"</string>
     <string name="reboot">Uruchom ponownie</string>
     <string name="menu_refresh">Odśwież</string>
     <string name="menu_preferences">Ustawienia</string>
@@ -54,7 +60,7 @@
     <string name="menu_show_changelog">Pokaż listę zmian</string>
     <string name="menu_ab_perf_mode">Nadaj wyższy priorytet procesowi aktualizacji</string>
     <string name="menu_update_recovery">Aktualizuj Recovery</string>
-    <string name="toast_forced_update_recovery">Nie można wyłączyć aktualizacji Lineage Recovery na tym urządzeniu.</string>
+    <string name="toast_forced_update_recovery">Nie można wyłączyć aktualizacji Everest Recovery na tym urządzeniu.</string>
     <string name="snack_updates_found">Znaleziono nowe aktualizacje</string>
     <string name="snack_no_updates_found">Nie znaleziono nowych aktualizacji</string>
     <string name="snack_updates_check_failed">Sprawdzanie aktualizacji nie powiodło się. Sprawdź połączenie z Internetem i spróbuj ponownie.</string>
@@ -62,11 +68,11 @@
     <string name="snack_download_verification_failed">Weryfikacja aktualizacji się nie powiodła.</string>
     <string name="snack_download_verified">Pobieranie zakończone.</string>
     <string name="snack_update_not_installable">Ta aktualizacja nie może zostać zainstalowana na bieżącej wersji systemu.</string>
-    <string name="header_title_text">risingOS\n%1$s</string>
+    <string name="header_title_text">EverestOS\n%1$s</string>
     <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
     <string name="header_last_updates_check">Ostatnio sprawdzane: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">risingOS <xliff:g id="version" example="14.1">%1$s</xliff:g></string>
-    <string name="list_build_version_date">risingOS <xliff:g id="version" example="14.1">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
+    <string name="list_build_version">EverestOS <xliff:g id="version" example="14.1">%1$s</xliff:g></string>
+    <string name="list_build_version_date">EverestOS <xliff:g id="version" example="14.1">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_newer"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_newer"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> z <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">Sprawdzanie aktualizacji</string>
@@ -114,13 +120,13 @@
     <string name="checkbox_metered_network_warning">Nie pokazuj ponownie</string>
     <string name="menu_metered_network_warning">Ostrzeżenie o sieci z pomiarem</string>
     <string name="blocked_update_dialog_title">Aktualizacja zablokowana</string>
-    <string name="blocked_update_dialog_message">Tej aktualizacji nie można zainstalować przy użyciu aplikacji aktualizacji.  Zapoznaj się z <xliff:g id="info_url">%1$s </xliff:g> aby uzyskać więcej informacji.</string>
+    <string name="blocked_update_dialog_message">Tej aktualizacji nie można zainstalować przy użyciu aplikacji \"Aktualizator\".  Zapoznaj się z <xliff:g id="info_url">%1$s </xliff:g>, aby uzyskać więcej informacji.</string>
     <string name="export_channel_title">Eksport zakończony</string>
     <string name="new_updates_channel_title">Nowe aktualizacje</string>
     <string name="ongoing_channel_title">Trwające pobieranie</string>
     <string name="update_failed_channel_title">Aktualizacja nie powiodła się</string>
     <string name="info_dialog_title">Czy wiesz, że?</string>
-    <string name="info_dialog_message">Aktualizacje risingOS to pełne pakiety instalacyjne. Oznacza to, że zawsze możesz zainstalować tylko najnowszą aktualizację, nawet jeśli poprzednie zostały pominięte!</string>
+    <string name="info_dialog_message">Aktualizacje EverestOS to pełne pakiety instalacyjne. Oznacza to, że zawsze możesz zainstalować tylko najnowszą aktualizację, nawet jeśli poprzednie zostały pominięte!</string>
     <string name="info_dialog_ok">Dziękujemy za informację!</string>
     <string name="local_update_import">Aktualizacja lokalna</string>
     <string name="local_update_import_progress">Importowanie aktualizacji lokalnej\u2026</string>

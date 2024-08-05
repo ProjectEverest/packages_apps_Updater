@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2017-2023 The LineageOS Project
+     Copyright (C) 2017-2024 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@
     <string name="installation_suspended_notification">Instalimi u pezullua</string>
     <string name="new_updates_found_title">Përditësime të reja</string>
     <string name="text_download_speed">%1$s, %2$s/s</string>
-    <string name="pause_button">Pusho</string>
+    <string name="pause_button">Ndalo</string>
     <string name="resume_button">Rinis</string>
     <string name="suspend_button">Pezullu</string>
     <string name="installing_update">Duke instaluar paketën e përditësimit</string>
@@ -39,6 +39,11 @@
     <string name="dialog_prepare_zip_message">Parapërgatitje për përditësimin</string>
     <string name="dialog_battery_low_title">Bateria e ulët</string>
     <string name="dialog_battery_low_message_pct">Niveli i baterië është shumë i ulët, për të vazhduar duhet të jetë të paktën <xliff:g id="percent_discharging">%1$d</xliff:g>%% e baterisë, ose <xliff:g id="percent_charging">%2$d</xliff:g>%% nëse po karikohet.</string>
+    <string name="dialog_scratch_mounted_message"><![CDATA[Ju lutemi ekzekutoni komandat e mëposhtme dhe riprovoni përditësimin:\n
+         • rrënjë adb\n
+         • adb enable-verity\n
+         • rindezje adb]]></string>
+    <string name="dialog_scratch_mounted_title">Përditësimi nuk mund të instalohet me OverlayFS të montuar</string>
     <string name="reboot">Rindiz</string>
     <string name="menu_refresh">Rifresko</string>
     <string name="menu_preferences">Preferencat</string>
@@ -54,7 +59,7 @@
     <string name="menu_show_changelog">Shfaq ndryshimet</string>
     <string name="menu_ab_perf_mode">Jepi përparësi përditësimit</string>
     <string name="menu_update_recovery">Përditëso rikuperimin</string>
-    <string name="toast_forced_update_recovery">Është e pamundur të çaktivizoni përditësimet e rikuperimit të Lineages në këtë pajisje.</string>
+    <string name="toast_forced_update_recovery">Është e pamundur të çaktivizoni përditësimet e rikuperimit të Everest në këtë pajisje.</string>
     <string name="snack_updates_found">Ka përditësime të reja</string>
     <string name="snack_no_updates_found">Nuk u gjet asnjë përditësim i ri</string>
     <string name="snack_updates_check_failed">Kontrolli për përditësim dështoi. Ju lutem kontrolloni për lidhjen me internet e më pas provoni sërish.</string>
@@ -62,11 +67,11 @@
     <string name="snack_download_verification_failed">Verifikim i përditësimit dështoi.</string>
     <string name="snack_download_verified">Shkarkimi përfundoi.</string>
     <string name="snack_update_not_installable">Ky përditësim nuk mund të instalohet mbi këtë version aktual.</string>
-    <string name="header_title_text">risingOS\n%1$s</string>
+    <string name="header_title_text">EverestOS\n%1$s</string>
     <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
     <string name="header_last_updates_check">Kontrolli i fundit: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">risingOS <xliff:g id="version" example="14.1">%1$s</xliff:g></string>
-    <string name="list_build_version_date">risingOS <xliff:g id="version" example="14.1">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
+    <string name="list_build_version">EverestOS <xliff:g id="version" example="14.1">%1$s</xliff:g></string>
+    <string name="list_build_version_date">EverestOS <xliff:g id="version" example="14.1">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_newer"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> nga <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_newer"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> nga <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">Duke verifikuar përditësimin</string>
@@ -116,7 +121,7 @@ Dëshironi të vazhdoni?</string>
     <string name="ongoing_channel_title">Shkarkimet në proces</string>
     <string name="update_failed_channel_title">Përditësimi dështoi</string>
     <string name="info_dialog_title">A e dinit?</string>
-    <string name="info_dialog_message">Përditësimet e risingOS janë paketa të plota instalimi. Kjo do të thotë që gjithmonë mund të instaloni vetëm përditësimin më të fundit, edhe nëse keni anashkaluar disa në mes!</string>
+    <string name="info_dialog_message">Përditësimet e EverestOS janë paketa të plota instalimi. Kjo do të thotë që gjithmonë mund të instaloni vetëm përditësimin më të fundit, edhe nëse keni anashkaluar disa në mes!</string>
     <string name="info_dialog_ok">Faleminderit për informacionin!</string>
     <string name="local_update_import">Përditësim lokal</string>
     <string name="local_update_import_progress">Përditësimi lokal po importohet\u2026</string>

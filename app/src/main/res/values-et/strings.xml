@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2017-2023 The LineageOS Project
+     Copyright (C) 2017-2024 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -18,6 +18,7 @@
     <string name="app_name">Uuendaja</string>
     <string name="display_name">Uuendaja</string>
     <string name="installation_suspended_notification">Installimine peatati</string>
+    <string name="text_download_speed">%1$s, %2$s/s</string>
     <string name="suspend_button">Peata</string>
     <string name="dialog_battery_low_title">Madal akutase</string>
     <string name="dialog_battery_low_message_pct">Akutase on liiga madal, jätkamiseks on vaja akut vähemalt <xliff:g id="percent_discharging">%1$d</xliff:g>%%, laadimise korral <xliff:g id="percent_charging">%2$d</xliff:g>%%.</string>
@@ -28,7 +29,7 @@
     <string name="menu_show_changelog">Näita muutuste nimekirja</string>
     <string name="menu_ab_perf_mode">Eelista uuendusprotsessi</string>
     <string name="menu_update_recovery">Uuenda taastust</string>
-    <string name="toast_forced_update_recovery">Lineage Recovery taastevärskendusi pole selles seadmes võimalik keelata.</string>
+    <string name="toast_forced_update_recovery">Everest Recovery taastevärskendusi pole selles seadmes võimalik keelata.</string>
     <plurals name="eta_seconds">
         <item quantity="one">1 sekund jäänud</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> sekundit jäänud</item>

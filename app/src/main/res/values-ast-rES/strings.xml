@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2017-2023 The LineageOS Project
+     Copyright (C) 2017-2024 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -39,6 +39,12 @@
     <string name="dialog_prepare_zip_message">Tresnáu preliminar del anovamientu</string>
     <string name="dialog_battery_low_title">Queda poca batería</string>
     <string name="dialog_battery_low_message_pct">El nivel de batería ye perbaxu, tien d\'haber polo menos un <xliff:g id="percent_discharging">%1$d</xliff:g>%% de batería pa siguir, <xliff:g id="percent_charging">%2$d</xliff:g>%% si ta en carga.</string>
+    <string name="dialog_scratch_mounted_message"><![CDATA[        Executa los comandos siguientes y volvi probar l\'anovamientu:\n
+        • adb root\n
+        • adb enable-verity\n
+        • adb reboot
+        ]]></string>
+    <string name="dialog_scratch_mounted_title">Nun se pue instalar l\'anovamientu con OverlayFS montáu</string>
     <string name="reboot">Reaniciar</string>
     <string name="menu_refresh">Anovar</string>
     <string name="menu_preferences">Preferencies</string>
@@ -54,7 +60,7 @@
     <string name="menu_show_changelog">Amosar el rexistru de cambeos</string>
     <string name="menu_ab_perf_mode">Priorizar el procesu d\'anovamientu</string>
     <string name="menu_update_recovery">Anovar el recovery</string>
-    <string name="toast_forced_update_recovery">Ye imposible desactivar los anovamientos del recovery de Lineage nesti preséu.</string>
+    <string name="toast_forced_update_recovery">Ye imposible desactivar los anovamientos del recovery de Everest nesti preséu.</string>
     <string name="snack_updates_found">Atopáronse anovamientos</string>
     <string name="snack_no_updates_found">Nun s\'atopó nengún anovamientu</string>
     <string name="snack_updates_check_failed">La comprobación d\'anovamientos falló. Comprueba la conexón a internet y volvi tentalo.</string>
@@ -62,11 +68,11 @@
     <string name="snack_download_verification_failed">La comprobación d\'anovamientos falló</string>
     <string name="snack_download_verified">Completóse la descarga.</string>
     <string name="snack_update_not_installable">Esti anovamientu nun se pue instalar sobre la versión actual.</string>
-    <string name="header_title_text">risingOS\n%1$s</string>
+    <string name="header_title_text">EverestOS\n%1$s</string>
     <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
     <string name="header_last_updates_check">Última comprobación: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">risingOS <xliff:g id="version" example="14.1">%1$s</xliff:g></string>
-    <string name="list_build_version_date">risingOS <xliff:g id="version" example="14.1">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
+    <string name="list_build_version">EverestOS <xliff:g id="version" example="14.1">%1$s</xliff:g></string>
+    <string name="list_build_version_date">EverestOS <xliff:g id="version" example="14.1">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_newer"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_newer"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> de <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">Verificando l\'anovamientu</string>
@@ -106,7 +112,7 @@
     <string name="update_over_metered_network_title">Alvertencia</string>
     <string name="update_over_metered_network_message">Tas a piques de baxar un paquete d\'anovamientu pente una rede midida, lo que probablemente vaiga xenerar un usu altu de datos. ¿Quies siguir?</string>
     <string name="checkbox_metered_network_warning">Nun volver amosar</string>
-    <string name="menu_metered_network_warning">Alvertencia pa redes midíes</string>
+    <string name="menu_metered_network_warning">Alvertir al tar nuna rede midida</string>
     <string name="blocked_update_dialog_title">Bloquióse l\'anovamientu</string>
     <string name="blocked_update_dialog_message">Esti anovamientu nun se pue instalar con «Anovador».  Llei <xliff:g id="info_url">%1$s</xliff:g> pa consiguir más información.</string>
     <string name="export_channel_title">Esportación completada</string>
@@ -114,11 +120,12 @@
     <string name="ongoing_channel_title">Descargues en cursu</string>
     <string name="update_failed_channel_title">Anovamientu fallíu</string>
     <string name="info_dialog_title">¿Sabíeslo?</string>
-    <string name="info_dialog_message">Los anovamientos de risingOS son paquetes d\'instalación completos. Esto significa que siempres pues instalar l\'últimu anovamientu, ¡magar que saltares dalgún intermediu!</string>
+    <string name="info_dialog_message">Los anovamientos de EverestOS son paquetes d\'instalación completos. Esto significa que siempres pues instalar l\'últimu anovamientu, ¡magar que saltares dalgún intermediu!</string>
     <string name="info_dialog_ok">¡Gracies!</string>
     <string name="local_update_import">Anovamientu llocal</string>
     <string name="local_update_import_progress">Importando l\'anovamientu llocal\u2026</string>
     <string name="local_update_import_success">Importóse «%1$s». ¿Quies instalar l\'anovamientu?</string>
+    <string name="local_update_import_failure">Hebo un fallu al importar l\'anovamientu llocal</string>
     <string name="local_update_import_install">Instalar</string>
     <string name="local_update_name">Anovamientu llocal</string>
 </resources>

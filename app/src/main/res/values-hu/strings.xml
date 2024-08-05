@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2017-2023 The LineageOS Project
+     Copyright (C) 2017-2024 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -40,6 +40,12 @@
     <string name="dialog_battery_low_title">Alacsony akkumulátorszint</string>
     <string name="dialog_battery_low_message_pct">Az akkumulátortöltöttség túl alacsony, szüksége van legalább <xliff:g id="percent_discharging">%1$d</xliff:g>%% töltöttségre a folytatáshoz,
 illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:g>%% töltés szükséges.</string>
+    <string name="dialog_scratch_mounted_message"><![CDATA[        Futtassa az alábbi parancsokat, majd próbálja újra a frissítést:\n
+        • adb root\n
+        • adb enable-verity\n
+        • adb reboot
+        ]]></string>
+    <string name="dialog_scratch_mounted_title">Nem telepíthet frissítést a felcsatlakoztatott OverlayFS miatt</string>
     <string name="reboot">Újraindítás</string>
     <string name="menu_refresh">Frissítés</string>
     <string name="menu_preferences">Testreszabás</string>
@@ -55,7 +61,7 @@ illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:
     <string name="menu_show_changelog">A változások listájának megjelenítése</string>
     <string name="menu_ab_perf_mode">Állítsa fontossági sorrendbe a frissítési folyamatot</string>
     <string name="menu_update_recovery">Recovery-frissítés</string>
-    <string name="toast_forced_update_recovery">Ezen a készüléken nem lehet letiltani a Lineage Recovery frissítéseket.</string>
+    <string name="toast_forced_update_recovery">Ezen a készüléken nem lehet letiltani a Everest Recovery frissítéseket.</string>
     <string name="snack_updates_found">Új frissítés érhető el</string>
     <string name="snack_no_updates_found">Nem található új frissítés</string>
     <string name="snack_updates_check_failed">Nem sikerült a frissítéskeresés. Ellenőrizze az internetkapcsolatát, majd próbálja újra.</string>
@@ -63,11 +69,11 @@ illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:
     <string name="snack_download_verification_failed">A frissítés ellenőrzése sikertelen.</string>
     <string name="snack_download_verified">A letöltés befejeződött.</string>
     <string name="snack_update_not_installable">Ez a frissítés nem telepíthető a jelenlegi verzióra.</string>
-    <string name="header_title_text">risingOS\n%1$s</string>
+    <string name="header_title_text">EverestOS\n%1$s</string>
     <string name="header_android_version">Android <xliff:g id="version" example="7.1.2">%1$s</xliff:g></string>
     <string name="header_last_updates_check">Utolsó ellenőrzés: <xliff:g id="date" example="1 January 1970">%1$s</xliff:g> (<xliff:g id="time" example="01:23">%2$s</xliff:g>)</string>
-    <string name="list_build_version">risingOS <xliff:g id="version" example="14.1">%1$s</xliff:g></string>
-    <string name="list_build_version_date">risingOS <xliff:g id="version" example="14.1">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
+    <string name="list_build_version">EverestOS <xliff:g id="version" example="14.1">%1$s</xliff:g></string>
+    <string name="list_build_version_date">EverestOS <xliff:g id="version" example="14.1">%1$s</xliff:g> - <xliff:g id="date" example="July 11, 2017">%2$s</xliff:g></string>
     <string name="list_download_progress_newer"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g></string>
     <string name="list_download_progress_eta_newer"><xliff:g id="filesize_without_unit" example="12.2">%1$s</xliff:g> / <xliff:g id="filesize_without_unit" example="310 MB">%2$s</xliff:g> (<xliff:g id="eta" example="3 minutes left">%3$s</xliff:g>)</string>
     <string name="list_verifying_update">Frissítésellenőrzés</string>
@@ -105,7 +111,9 @@ illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:
         <item quantity="other"><xliff:g id="count">%d</xliff:g> óra van hátra</item>
     </plurals>
     <string name="update_over_metered_network_title">Figyelmeztetés</string>
+    <string name="update_over_metered_network_message">Úgy tűnik mobiladat-forgalmat használva kíván letölteni egy nagyméretű frissítési csomagot, ami nagy költséggel járhat. Biztos benne hogy engedélyezi ezt?</string>
     <string name="checkbox_metered_network_warning">Ne jelenjen meg többet</string>
+    <string name="menu_metered_network_warning">Mobiladat-költség figyelmeztetés</string>
     <string name="blocked_update_dialog_title">A frissítés blokkolva</string>
     <string name="blocked_update_dialog_message">Ez a frissítés nem telepíthető a Frissítés alkalmazással. További információért olvassa el a következőt: <xliff:g id="info_url">%1$s</xliff:g></string>
     <string name="export_channel_title">Exportálás-véglegesítés</string>
@@ -113,6 +121,12 @@ illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:
     <string name="ongoing_channel_title">Folyamatban lévő letöltések</string>
     <string name="update_failed_channel_title">A frissítés sikertelen</string>
     <string name="info_dialog_title">Tudta Ön?</string>
-    <string name="info_dialog_message">A risingOS frissítései teljes telepítőcsomagok. Ez azt jelenti, hogy mindig elég a legfrissebb csomagot telepítenie, nem baj ha korábban kihagyott párat!</string>
+    <string name="info_dialog_message">A EverestOS frissítései teljes telepítőcsomagok. Ez azt jelenti, hogy mindig elég a legfrissebb csomagot telepítenie, nem baj ha korábban kihagyott párat!</string>
     <string name="info_dialog_ok">Köszönet az információért!</string>
+    <string name="local_update_import">Helyi frissítés</string>
+    <string name="local_update_import_progress">Helyi frissítés importálása\u2026</string>
+    <string name="local_update_import_success">%1$s importálva lett. Kívánja telepíteni?</string>
+    <string name="local_update_import_failure">Nem sikerült importálni a helyi frissítést</string>
+    <string name="local_update_import_install">Telepítés</string>
+    <string name="local_update_name">Helyi frissítés</string>
 </resources>
