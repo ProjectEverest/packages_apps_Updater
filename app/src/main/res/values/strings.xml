@@ -186,6 +186,4 @@
     <string name="local_update_import_failure">Failed to import local update</string>
     <string name="local_update_import_install">Install</string>
     <string name="local_update_name">Local update</string>
-
-    <string name="maintainer_name">Maintainer: <xliff:g id="maintainer" example="Maintainer Name">%1$s</xliff:g></string>
 </resources>

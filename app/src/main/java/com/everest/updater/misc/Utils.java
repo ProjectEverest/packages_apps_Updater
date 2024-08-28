@@ -59,8 +59,6 @@ public class Utils {
 
     private static final String TAG = "Utils";
 
-    private static String mMaintainer;
-
     private Utils() {
     }
 
@@ -94,7 +92,6 @@ public class Utils {
         update.setFileSize(object.getLong("size"));
         update.setDownloadUrl(object.getString("url"));
         update.setVersion(object.getString("version"));
-        mMaintainer = object.getString("maintainer");
         return update;
     }
 
@@ -427,9 +424,5 @@ public class Utils {
 
     public static boolean isABPerfModeForceEnabled(Context context) {
         return context.getResources().getBoolean(R.bool.config_forcePrioritizeUpdateProcess);
-    }
-
-    public static String getMaintainer() {
-        return mMaintainer;
     }
 }
